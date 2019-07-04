@@ -24,5 +24,7 @@ export default {
 <style scoped>
   .home{
     display: grid;
+    grid-template-rows: 7vh 81vh 12vh;
+    height:100%;
   }
 </style>

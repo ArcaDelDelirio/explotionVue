@@ -21,6 +21,9 @@ export default {
         padding:1%;
     }
     nav a{
-        flex-basis: 50%;
+        align-self: center;
+    }
+    nav img{
+        align-self: center;
     }
 </style>
