@@ -4,13 +4,14 @@
         <div class="search-container">
             <form action="">
                 <input type="text" placeholder="ex:Title" name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <button type="submit"><i><font-awesome-icon icon="search"/></i></button>
             </form>
         </div>
     </div>
 </template>
 
 <script>
+
 export default {
     name:'SearchData',
 
