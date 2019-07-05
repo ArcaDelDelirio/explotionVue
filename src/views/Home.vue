@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <navData />
-    <searchData />
+    <NavData vue-bind:user="users" />
+    <SearchData />
     <FooterData />
   </div>
 </template>
@@ -18,6 +18,26 @@ export default {
     NavData,
     SearchData,
     FooterData
+  },
+  data(){
+    return {
+      users : [
+      {
+        id: 1,
+        name: 'Jorge',
+        pass: 'selector'
+      },
+      {
+        id:2,
+        name: 'Oskar',
+        pass: 'contador'
+      },
+      {
+        id:3,
+        name:'Luisa',
+        pass: 'hashed'
+      }
+    ]}
   }
 }
 </script>
