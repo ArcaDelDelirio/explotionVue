@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <NavData vue-bind:user="users" />
+    <NavData />
     <SearchData />
-    <FooterData />
+    <FooterData vue-bind:users="users" />
   </div>
 </template>
 
