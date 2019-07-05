@@ -1,3 +1,11 @@
+<script>
+export default {
+    name:'FooterData',
+    props:["users"]
+}
+</script>
+
+
 <template>
     <footer>
         <ul>
@@ -9,12 +17,6 @@
     </footer>
 </template>
 
-<script>
-export default {
-    name:'FooterData',
-    props:["users"]
-}
-</script>
 
 <style scoped>
     footer{

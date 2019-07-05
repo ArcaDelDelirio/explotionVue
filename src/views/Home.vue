@@ -1,46 +1,36 @@
-<template>
-  <div class="home">
-    <NavData />
-    <SearchData />
-    <FooterData vue-bind:users="users" />
-  </div>
-</template>
-
 <script>
 // @ is an alias to /src
 import FooterData from '@/components/FooterData.vue'
 import SearchData from '@/components/SearchData.vue'
 import NavData from '@/components/NavData.vue'
+import DataGallery from '@/components/DataGallery.vue'
 
 export default {
   name: 'home',
   components: {
     NavData,
     SearchData,
+    DataGallery,
     FooterData
   },
-  data(){
+  data() {
     return {
-      users : [
-      {
-        id: 1,
-        name: 'Jorge',
-        pass: 'selector'
-      },
-      {
-        id:2,
-        name: 'Oskar',
-        pass: 'contador'
-      },
-      {
-        id:3,
-        name:'Luisa',
-        pass: 'hashed'
-      }
-    ]}
+      movie : { title: ''}
+    }
   }
 }
 </script>
+
+
+<template>
+  <div class="home">
+    <NavData />
+    <SearchData />
+    <DataGallery :movie="movie" />
+    <FooterData />
+  </div>
+</template>
+
 <style scoped>
   .home{
     display: grid;

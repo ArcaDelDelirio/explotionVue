@@ -1,3 +1,12 @@
+<script>
+
+export default {
+    name:'SearchData',
+    
+}
+</script>
+
+
 <template>
     <div>
         <h1>Super Movie DataBase</h1>
@@ -9,14 +18,6 @@
         </div>
     </div>
 </template>
-
-<script>
-
-export default {
-    name:'SearchData',
-    
-}
-</script>
 
 <style scoped>
     .search-container{
@@ -30,7 +31,7 @@ export default {
     .search-input{
         flex-grow: 2;
     }
-    search-button{
+    .search-button{
         flex-grow: 1;
     }
 </style>

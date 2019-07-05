@@ -1,3 +1,10 @@
+<script>
+export default {
+    name:'NavData'
+}
+</script>
+
+
 <template>
     <nav>
         <router-link to="/">Home</router-link> 
@@ -8,11 +15,6 @@
     </nav>
 </template>
 
-<script>
-export default {
-    name:'NavData'
-}
-</script>
 
 <style scoped>
     nav{
