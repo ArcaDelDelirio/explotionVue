@@ -1,5 +1,9 @@
 /* eslint-disable no-undef */
 import { shallowMount } from '@vue/test-utils'
+import Vuex from 'vuex'
+import initialState from '../../store/state'
+
+
 import Home from '../../views/Home'
 import NavData from '../../components/NavData'
 import SearchData from '../../components/SearchData'
