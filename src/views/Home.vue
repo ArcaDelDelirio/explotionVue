@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      movie : { title: ''}
+      movie : { title: 'Matrix'}
     }
   }
 }

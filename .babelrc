@@ -7,5 +7,6 @@
         "vue": {
             "presets":[["env",{"targets":{"vuejs":"current"}}]]
         }
-    }
+    },
+    "plugins": ["@babel/plugin-syntax-dynamic-import"]
 }
