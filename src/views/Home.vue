@@ -1,11 +1,3 @@
-<template>
-  <div class="home">
-    <navData />
-    <searchData />
-    <FooterData />
-  </div>
-</template>
-
 <script>
 // @ is an alias to /src
 import FooterData from '@/components/FooterData.vue'
@@ -18,9 +10,26 @@ export default {
     NavData,
     SearchData,
     FooterData
+  },
+  data() {
+    return {
+      movie : {
+        SearchData
+      }
+    }
   }
 }
 </script>
+
+
+<template>
+  <div class="home">
+    <NavData />
+    <SearchData />
+    <FooterData />
+  </div>
+</template>
+
 <style scoped>
   .home{
     display: grid;

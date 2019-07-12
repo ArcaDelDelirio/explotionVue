@@ -1,0 +1,12 @@
+{
+    "presets": [["env", { "modules": false }]],
+    "env": {
+        "test": {
+            "presets": [["env", { "targets": { "node": "current" } }]]
+            },
+        "vue": {
+            "presets":[["env",{"targets":{"vuejs":"current"}}]]
+        }
+    },
+    "plugins": ["@babel/plugin-syntax-dynamic-import"]
+}

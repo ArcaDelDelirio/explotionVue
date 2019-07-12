@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About View Render the component 1`] = `"<div class=\\"about\\"><navdata-stub></navdata-stub> <h1>This is an about page</h1></div>"`;
