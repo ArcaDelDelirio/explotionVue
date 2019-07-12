@@ -3,19 +3,19 @@
 import FooterData from '@/components/FooterData.vue'
 import SearchData from '@/components/SearchData.vue'
 import NavData from '@/components/NavData.vue'
-import DataGallery from '@/components/DataGallery.vue'
 
 export default {
   name: 'home',
   components: {
     NavData,
     SearchData,
-    DataGallery,
     FooterData
   },
   data() {
     return {
-      movie : { title: 'Matrix'}
+      movie : {
+        SearchData
+      }
     }
   }
 }
@@ -26,7 +26,6 @@ export default {
   <div class="home">
     <NavData />
     <SearchData />
-    <DataGallery :movie="movie" />
     <FooterData />
   </div>
 </template>

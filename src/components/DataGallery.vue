@@ -4,7 +4,6 @@ export default {
     name:'DataGallery',
     props: {
         movie: {
-            type: Object,
             required: true,
             default: () => ({})
         }
@@ -14,8 +13,8 @@ export default {
 
 
 <template>
-    <div>
-
+    <div v-if="movie.hasOwnProperty('0')">
+        {{movie}}
     </div>
 </template>
 

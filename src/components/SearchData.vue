@@ -1,8 +1,19 @@
 <script>
 
+import DataGallery from "./DataGallery";
 export default {
     name:'SearchData',
-    
+    components: {
+        DataGallery
+    },
+    data(){
+        return {
+            searchUser:{}
+        }
+    },
+    methods:{
+
+    }
 }
 </script>
 
@@ -11,10 +22,13 @@ export default {
     <div>
         <h1>Super Movie DataBase</h1>
         <div class="search-container">
-            <form class="search-form" action="">
-                <input class="search-input" type="text" placeholder="ex:Title" name="search">
-                <button class="search-button" type="submit"><i><font-awesome-icon icon="search"/></i></button>
+            <form  class="search-form">
+                <input  class="search-input" type="text" placeholder="ex:Title" name="search">
+                <button class="search-button"><i><font-awesome-icon icon="search"/></i></button>
             </form>
+        </div>
+        <div id="result">
+            <DataGallery  :movie="searchUser"/>
         </div>
     </div>
 </template>
