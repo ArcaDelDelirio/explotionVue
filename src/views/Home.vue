@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <navData />
+    <searchData />
+    <FooterData />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import FooterData from '@/components/FooterData.vue'
+import SearchData from '@/components/SearchData.vue'
+import NavData from '@/components/NavData.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    NavData,
+    SearchData,
+    FooterData
   }
 }
 </script>
+<style scoped>
+  .home{
+    display: grid;
+    grid-template-rows: 7vh 81vh 12vh;
+    height:100%;
+  }
+</style>
