@@ -1,35 +1,75 @@
 <script>
 export default {
     name:'NavData'
+//TODO: userLogged variable must be an state??
 }
 </script>
 
 
 <template>
-    <nav>
-        <ul class="container">
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
-            <router-link to='/login'>Login</router-link>
-            <router-link to='/register'>Register</router-link>
-            <img src="@/assets/movie.png" height="24px" width="24px" alt="logo">
-        </ul>
-    </nav>
+    <header class="">
+        <nav class="navbar">
+            <div class="logo-container">
+                <span class="logo">
+                    <router-link to="/">
+                        <img src="@/assets/movie.png" height="24px" width="24px" alt="logo">
+                    </router-link>
+                </span>
+                <span>Super Movie DataBase</span>
+            </div>
+            <div class="login-container">
+                <div class="login-state">
+                    <div class="login-caps">
+                        <router-link to='/login' tag="button" class="sign-button">Sign In</router-link>
+                    </div>
+                    <div v-if="userLogged" class="user-logo">
+                        <i><font-awesome-icon icon="circle"/></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 </template>
 
 
 <style scoped>
-    .container{
+    header{
+        background-color: grey;
+        padding: 10px;
+    }
+    .navbar{
         display: flex;
         justify-content: space-between;
-        background-color: grey;
-        margin:0;
-        padding:1%;
+        align-items: center;
+        padding: 0 10px 0 10px;
     }
-    .container a{
-        align-self: center;
+    .logo-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    .container img{
-        align-self: center;
+    .logo{
+        padding: 0 10px 0 10px;
+    }
+    /* LOGIN */
+    .login-container{
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+    }
+    .login-state{
+
+    }
+    .login-caps{
+        //line-height: 28px;
+    }
+    .sign-button{
+        font-weight: bold;
+        background-color: lightgray;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        padding: 5px;
     }
 </style>

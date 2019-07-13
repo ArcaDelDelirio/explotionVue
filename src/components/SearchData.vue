@@ -20,7 +20,6 @@ export default {
 
 <template>
     <div>
-        <h1>Super Movie DataBase</h1>
         <div class="search-container">
             <form  class="search-form">
                 <input  class="search-input" type="text" placeholder="ex:Title" name="search">
