@@ -41,6 +41,9 @@
     "jest-serializer-vue": "^2.0.2",
     "nock": "^10.0.6",
     "prettier": "^1.18.2",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
     "vue-jest": "^3.0.4",
     "vue-template-compiler": "^2.6.10"
   },
