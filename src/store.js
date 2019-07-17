@@ -16,6 +16,7 @@ export default new Vuex.Store({
       ping('https://api-explotion.herokuapp.com/')
         .then((time) => {
           console.log(time);
+          state.responseTime = time;
         })
         .catch(() => console.log('Failed to ping google.com'));
     },

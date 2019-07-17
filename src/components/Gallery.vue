@@ -18,17 +18,18 @@ export default {
             console.log('Mounted');
             return fetch('https://api-explotion.herokuapp.com/movies/get-movies')
                     .then(res => res.json())
-                    .then(response => setProperty(response))
-                    .catch(error => setProperty(error))
+                    .then(response => this.setProperty(response))
+                    .catch(error => this.setProperty(error))
+        },
+        getProperty: function(){
+            return this.map(el => el.title)
+        },
+        setProperty: function(property){
+            this.movies = property;
+            return 0;
         }
     },
     computed:{
-        getProperty(){
-            return this.map(el => el.title)
-        },
-        setProperty(property){
-            this.movies.map(el => property)
-        }
     }
 }
 </script>
