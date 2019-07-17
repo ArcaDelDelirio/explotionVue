@@ -2,7 +2,7 @@
 import store from "../store";
 
 export default {
-    name:'NavData',
+    name:'NavBar',
     computed:{
         userState : () => store.state.userLogged  
     }

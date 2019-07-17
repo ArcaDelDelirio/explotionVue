@@ -1,10 +1,11 @@
 <script>
 import store from '../store'
 export default {
-    name:'FooterData',
+    name:'Footer',
     props:["users"],
     computed:{
-        apiStatus: () => store.state.apiState
+        apiStatus: () => store.state.apiState,
+        timeServer: () => store.commit('takeState')
     }
 }
 </script>
@@ -16,6 +17,7 @@ export default {
             <div :class="{active:apiStatus}" class="status">
                 <i><font-awesome-icon icon="circle"/></i>
             </div>
+            {{timeServer}}
             <i> <font-awesome-icon icon="server"/> API State </i>
         </div>
         <div v-bind:key="user.id" v-for="user in users">
@@ -29,6 +31,9 @@ export default {
     footer{
         display: flex;
         bottom: 0;
+    }
+    .status{
+        color:red;
     }
     .active{
         color:green;

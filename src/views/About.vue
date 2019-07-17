@@ -10,7 +10,7 @@
 </template>
 <script>
 // @ is an alias to /src
-import NavData from '@/components/NavData.vue'
+import NavBar from '@/components/NavBar.vue'
 
 export default {
   name: 'about',

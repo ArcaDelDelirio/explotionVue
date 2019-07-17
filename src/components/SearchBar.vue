@@ -1,14 +1,14 @@
 <script>
 
-import DataGallery from "./DataGallery";
+import DataGallery from "./Gallery";
 export default {
-    name:'SearchData',
+    name:'SearchBar',
     components: {
         DataGallery
     },
     data(){
         return {
-            searchUser:{}
+            searchUser:''
         }
     },
     methods:{
@@ -30,7 +30,7 @@ export default {
             </form>
         </div>
         <div id="result">
-            <DataGallery  :movie="searchUser"/>
+            <DataGallery  :searchQuery="searchUser"/>
         </div>
     </article>
 </template>

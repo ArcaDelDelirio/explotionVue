@@ -1,20 +1,19 @@
 <script>
-// @ is an alias to /src
-import FooterData from '@/components/FooterData.vue'
-import SearchData from '@/components/SearchData.vue'
-import NavData from '@/components/NavData.vue'
+import Footer from '@/components/Footer.vue'
+import SearchBar from '@/components/SearchBar.vue'
+import NavBar from '@/components/NavBar.vue'
 
 export default {
   name: 'home',
   components: {
-    NavData,
-    SearchData,
-    FooterData
+    NavBar,
+    SearchBar,
+    Footer
   },
   data() {
     return {
       movie : {
-        SearchData
+        
       }
     }
   }
@@ -24,9 +23,9 @@ export default {
 
 <template>
   <div class="home">
-    <NavData />
-    <SearchData />
-    <FooterData />
+    <NavBar />
+    <SearchBar />
+    <Footer />
   </div>
 </template>
 

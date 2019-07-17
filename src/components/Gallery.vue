@@ -1,12 +1,14 @@
 <script>
-
 export default {
-    name:'DataGallery',
-    props: {
-        movie: {
-            required: true,
-            default: () => ({})
+    name:'Gallery',
+    data(){
+        return {
+            movies: []
         }
+    },
+    props: {
+        
+        searchQuery: '',
     },
     mounted(){
         this.getAllMovies();
@@ -16,13 +18,16 @@ export default {
             console.log('Mounted');
             return fetch('https://api-explotion.herokuapp.com/movies/get-movies')
                     .then(res => res.json())
-                    .then(response => this.movie = response)
-                    .catch(error => this.movie = error)
+                    .then(response => setProperty(response))
+                    .catch(error => setProperty(error))
         }
     },
     computed:{
         getProperty(){
             return this.map(el => el.title)
+        },
+        setProperty(property){
+            this.movies.map(el => property)
         }
     }
 }
@@ -31,7 +36,7 @@ export default {
 
 <template>
     <div>
-        {{movie.getProperty}}
+        {{movies}}
     </div>
 </template>
 
