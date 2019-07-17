@@ -1,4 +1,5 @@
 <script>
+import { returnStatement } from '@babel/types';
 export default {
     name:'Gallery',
     data(){
@@ -6,8 +7,7 @@ export default {
             movies: []
         }
     },
-    props: {
-        
+    props: {     
         searchQuery: '',
     },
     mounted(){
@@ -15,7 +15,6 @@ export default {
     },
     methods:{
         getAllMovies(){
-            console.log('Mounted');
             return fetch('https://api-explotion.herokuapp.com/movies/get-movies')
                     .then(res => res.json())
                     .then(response => this.setProperty(response))
@@ -26,10 +25,12 @@ export default {
         },
         setProperty: function(property){
             this.movies = property;
-            return 0;
         }
     },
     computed:{
+        getSearchQuery(){
+            return this.searchQuery;
+        }
     }
 }
 </script>
