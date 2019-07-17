@@ -1,6 +1,11 @@
 <script>
+import store from "../store";
+
 export default {
-    name:'NavData'
+    name:'NavData',
+    computed:{
+        userState : () => store.state.userLogged  
+    }
 //TODO: userLogged variable must be an state??
 }
 </script>
@@ -22,7 +27,7 @@ export default {
                     <div class="login-caps">
                         <router-link to='/login' tag="button" class="sign-button">Sign In</router-link>
                     </div>
-                    <div v-if="userLogged" class="user-logo">
+                    <div v-if="userState" class="user-logo">
                         <i><font-awesome-icon icon="circle"/></i>
                     </div>
                 </div>
@@ -56,12 +61,6 @@ export default {
         display: flex;
         justify-content: space-around;
         padding: 5px;
-    }
-    .login-state{
-
-    }
-    .login-caps{
-        //line-height: 28px;
     }
     .sign-button{
         font-weight: bold;

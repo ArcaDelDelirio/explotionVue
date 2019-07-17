@@ -7,14 +7,31 @@ export default {
             required: true,
             default: () => ({})
         }
+    },
+    mounted(){
+        this.getAllMovies();
+    },
+    methods:{
+        getAllMovies(){
+            console.log('Mounted');
+            return fetch('https://api-explotion.herokuapp.com/movies/get-movies')
+                    .then(res => res.json())
+                    .then(response => this.movie = response)
+                    .catch(error => this.movie = error)
+        }
+    },
+    computed:{
+        getProperty(){
+            return this.map(el => el.title)
+        }
     }
 }
 </script>
 
 
 <template>
-    <div v-if="movie.hasOwnProperty('0')">
-        {{movie}}
+    <div>
+        {{movie.getProperty}}
     </div>
 </template>
 

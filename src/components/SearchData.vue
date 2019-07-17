@@ -19,7 +19,10 @@ export default {
 
 
 <template>
-    <div>
+    <article class="container">
+        <div class="main-title">
+            <h1>Search on Database</h1>
+        </div>
         <div class="search-container">
             <form  class="search-form">
                 <input  class="search-input" type="text" placeholder="ex:Title" name="search">
@@ -29,13 +32,23 @@ export default {
         <div id="result">
             <DataGallery  :movie="searchUser"/>
         </div>
-    </div>
+    </article>
 </template>
 
 <style scoped>
+    .container{
+        display:grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 10% 5% 85%;
+    }
+    .main-title{
+        grid-row: 1;
+        grid-column: 2 / 3;
+    }
     .search-container{
         display: flex;
-        margin: 0 10% 0 10%;
+        grid-column: 2 / 3;
+        grid-row: 2;
     }
     .search-form{
         flex-grow: 1;
@@ -45,6 +58,10 @@ export default {
         flex-grow: 2;
     }
     .search-button{
-        flex-grow: 1;
+        
+    }
+    #result{
+        grid-row: 3;
+        grid-column: 2/3;
     }
 </style>
