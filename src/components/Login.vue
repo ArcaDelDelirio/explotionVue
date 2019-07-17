@@ -1,3 +1,9 @@
+<script>
+    export default {
+        name: "login"
+    }
+</script>
+∫
 <template>
     <div class="card-login">
         <form action="">
@@ -21,11 +27,6 @@
     </div>
 </template>
 
-<script>
-    export default {
-        name: "inputData"
-    }
-</script>
 
 <style scoped>
     .card-login{

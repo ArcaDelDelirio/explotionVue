@@ -26,7 +26,7 @@ export default {
             <div :class="{active:apiStatus}" class="status">
                 <i><font-awesome-icon icon="circle"/></i>
             </div>
-            {{responseTime}}
+            {{responseTime}}ms
             <i> <font-awesome-icon icon="server"/> API State </i>
         </div>
         <div v-bind:key="user.id" v-for="user in users">
