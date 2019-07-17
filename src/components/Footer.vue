@@ -3,10 +3,19 @@ import store from '../store'
 export default {
     name:'Footer',
     props:["users"],
+    methods:{
+        timeServer: () => {
+            store.commit('takeState')
+        }
+    },
     computed:{
         apiStatus: () => store.state.apiState,
-        timeServer: () => store.commit('takeState')
-    }
+        responseTime: () => store.state.responseTime
+    },
+    mounted(){
+        this.timeServer();
+        store.commit('changeStatus')
+    },
 }
 </script>
 
@@ -17,7 +26,7 @@ export default {
             <div :class="{active:apiStatus}" class="status">
                 <i><font-awesome-icon icon="circle"/></i>
             </div>
-            {{timeServer}}
+            {{responseTime}}
             <i> <font-awesome-icon icon="server"/> API State </i>
         </div>
         <div v-bind:key="user.id" v-for="user in users">

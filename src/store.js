@@ -17,8 +17,12 @@ export default new Vuex.Store({
         .then((time) => {
           console.log(time);
           console.log(state.responseTime);
+          state.responseTime = time;
         })
         .catch(() => console.log('Failed to ping google.com'));
+    },
+    changeStatus(state) {
+      if (state.responseTime > 0) state.apiState = true;
     },
   },
   actions: {
