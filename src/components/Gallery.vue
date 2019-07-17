@@ -8,7 +8,10 @@ export default {
         }
     },
     props: {     
-        searchQuery: '',
+        searchQuery:{
+            type: String,
+            required: false,
+        },
     },
     mounted(){
         this.getAllMovies();
@@ -38,6 +41,7 @@ export default {
 
 <template>
     <div>
+        {{searchQuery}}
         {{movies}}
     </div>
 </template>

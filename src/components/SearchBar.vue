@@ -25,12 +25,12 @@ export default {
         </div>
         <div class="search-container">
             <form  class="search-form">
-                <input  class="search-input" type="text" placeholder="ex:Title" name="search">
+                <input  class="search-input" type="text" placeholder="ex:Title" name="search" v-model="searchUser">
                 <button class="search-button"><i><font-awesome-icon icon="search"/></i></button>
             </form>
         </div>
         <div id="result">
-            <DataGallery  :searchQuery="searchUser"/>
+            <DataGallery :searchQuery="searchUser"/>
         </div>
     </article>
 </template>
