@@ -1,5 +1,5 @@
 <script>
-import { returnStatement } from '@babel/types';
+import { MovieCard } from "./MovieCard";
 export default {
     name:'Gallery',
     data(){
@@ -42,6 +42,7 @@ export default {
 <template>
     <div>
         {{searchQuery}}
+        <MovieCard />
         {{movies}}
     </div>
 </template>

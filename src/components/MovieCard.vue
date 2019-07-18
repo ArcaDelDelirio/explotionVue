@@ -12,9 +12,13 @@ export default {
 </script>
 
 <template>
-    
+    <div class="card">
+        
+    </div>
 </template>
 
 <style scoped>
-
+.card{
+    display: flex,
+}
 </style>
