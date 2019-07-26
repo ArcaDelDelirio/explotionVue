@@ -1,5 +1,4 @@
 <script>
-
 import DataGallery from "./Gallery";
 export default {
     name:'SearchBar',
@@ -10,9 +9,6 @@ export default {
         return {
             searchUser:''
         }
-    },
-    methods:{
-
     }
 }
 </script>
@@ -56,9 +52,6 @@ export default {
     }
     .search-input{
         flex-grow: 2;
-    }
-    .search-button{
-        
     }
     #result{
         grid-row: 3;
