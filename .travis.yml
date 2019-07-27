@@ -12,12 +12,10 @@ jobs:
       name: "Testing Vue"
       script: 
         npm run test:unit
-    - stage: "Build"
-      name: "Building App"
+    - stage: "Deploy"
+      name: "Build and Deploy App"
       script: 
         npm run build
-    - stage: "Deploy"
-      name: "GH-pages Deploy"
       deploy:
         local_dir: dist
         provider: pages
