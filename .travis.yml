@@ -10,13 +10,11 @@ jobs:
     - stage: "Test"
       name: "Testing Vue"
     - script: 
-      - npm run test
+      - npm run test:unit
     - stage: "Build"
       name: "Building App"
     - script: 
       - npm run build
-    - before_deploy: 
-      - npm run clean
     - deploy:
         local_dir: dist
         provider: pages
