@@ -4,6 +4,17 @@
   </div>
 </template>
 
+<script>
+import store from './store'
+
+export default {
+  mounted(){
+    store.dispatch('takeState')
+  }
+}
+</script>
+
+
 <style>
   html,body{
     margin: 0;

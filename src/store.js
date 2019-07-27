@@ -12,20 +12,19 @@ export default new Vuex.Store({
     responseTime: 0,
   },
   mutations: {
-    takeState(state) {
-      ping('https://api-explotion.herokuapp.com/')
-        .then((time) => {
-          console.log(time);
-          console.log(state.responseTime);
-          state.responseTime = time;
-        })
-        .catch(() => console.log('Failed to ping google.com'));
-    },
-    changeStatus(state) {
-      if (state.responseTime > 0) state.apiState = true;
+    takeState(state, time) {
+      state.responseTime = time;
+      state.apiState = (time > 0);
     },
   },
   actions: {
+    getServerStatus(context) {
+      ping('https://api-explotion.herokuapp.com/')
+        .then((time) => {
+          context.commit('takeState', time);
+        })
+        .catch(() => console.log('Failed to ping server'));
+    },
 
   },
 });

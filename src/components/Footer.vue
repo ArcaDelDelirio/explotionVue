@@ -3,19 +3,10 @@ import store from '../store'
 export default {
     name:'Footer',
     props:["users"],
-    methods:{
-        timeServer: () => {
-            store.commit('takeState')
-        }
-    },
     computed:{
         apiStatus: () => store.state.apiState,
         responseTime: () => store.state.responseTime
-    },
-    mounted(){
-        this.timeServer();
-        store.commit('changeStatus')
-    },
+    }
 }
 </script>
 
