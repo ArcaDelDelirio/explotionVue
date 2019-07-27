@@ -13,6 +13,7 @@ jobs:
         npm run test:unit
     - stage: "Deploy"
       name: "Build and Deploy App"
+      cache: npm
       script: 
         npm run build
       deploy:
