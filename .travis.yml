@@ -3,13 +3,25 @@ node:js:
   - "10"
 branches:
   only:
-    - gh-pages
+    - master
 
-deploy:
-  local_dir: dist
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  on:
-    branch: gh-pages
+jobs:
+  include:
+    - stage: "Test"
+      name: "Testing Vue"
+    - script: 
+      - npm run test
+    - stage: "Build"
+      name: "Building App"
+    - script: 
+      - npm run build
+    - before_deploy: 
+      - npm run clean
+    - deploy:
+        local_dir: dist
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN  
+        keep_history: true
+        on:
+          branch: gh-pages
