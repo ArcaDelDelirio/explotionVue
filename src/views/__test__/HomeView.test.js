@@ -1,12 +1,8 @@
-/* eslint-disable no-undef */
 import { shallowMount } from '@vue/test-utils';
-import initialState from '../../store.js';
-
+import NavBar from '../../components/NavBar';
+import SearchBar from '../../components/SearchBar';
+import Footer from '../../components/Footer';
 import Home from '../Home';
-import NavData from '../../components/NavData';
-import SearchData from '../../components/SearchData';
-import FooterData from '../../components/FooterData';
-import DataGallery from '../../components/DataGallery';
 
 describe('Home View', () => {
   const build = () => {
@@ -18,10 +14,9 @@ describe('Home View', () => {
 
     return {
       wrapper,
-      navigationData: () => wrapper.find(NavData),
-      searchData: () => wrapper.find(SearchData),
-      dataGallery: () => wrapper.find(DataGallery),
-      footerData: () => wrapper.find(FooterData),
+      navigationData: () => wrapper.find(NavBar),
+      searchData: () => wrapper.find(SearchBar),
+      footerData: () => wrapper.find(Footer),
     };
   };
 
@@ -30,21 +25,20 @@ describe('Home View', () => {
     expect(wrapper.html()).toMatchSnapshot();
   }),
     it('Render the NavData component', () => {
-      const { navigationData, searchData, dataGallery, footerData } = build();
+      const { navigationData, searchData, footerData } = build();
 
       expect(navigationData().exists()).toBe(true);
       expect(searchData().exists()).toBe(true);
-      expect(dataGallery().exists()).toBe(true);
       expect(footerData().exists()).toBe(true);
-    }),
-    it('Pass a binded title movie props to DataGallery component', () => {
-      const { wrapper, dataGallery } = build();
-      wrapper.setData({
-        movie: {
-          title: 'Matrix',
-        },
-      });
-
-      expect(dataGallery().vm.movie).toBe(wrapper.vm.movie);
     });
+  // it('Pass a binded title movie props to DataGallery component', () => {
+  //   const { wrapper, dataGallery } = build();
+  //   wrapper.setData({
+  //     movie: {
+  //       title: 'Matrix',
+  //     },
+  //   });
+
+  //   expect(dataGallery().vm.movie).toBe(wrapper.vm.movie);
+  // });
 });

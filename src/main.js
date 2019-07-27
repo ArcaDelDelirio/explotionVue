@@ -1,12 +1,15 @@
 import Vue from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faNodeJs } from '@fortawesome/free-brands-svg-icons';
-import { faServer, faSearch, faCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faServer,
+  faSearch,
+  faCircle,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-
 
 library.add(faNodeJs, faServer, faSearch, faCircle);
 

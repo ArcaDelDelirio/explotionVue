@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home View Render the component 1`] = `"<div class=\\"home\\"><navdata-stub></navdata-stub> <searchdata-stub></searchdata-stub> <datagallery-stub movie=\\"[object Object]\\"></datagallery-stub> <footerdata-stub></footerdata-stub></div>"`;
+exports[`Home View Render the component 1`] = `
+<div class="home">
+  <navbar-stub></navbar-stub>
+  <searchbar-stub></searchbar-stub>
+  <footer-stub></footer-stub>
+</div>
+`;

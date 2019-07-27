@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar View Render the component 1`] = `
+<header>
+  <nav class="navbar">
+    <div class="logo-container"><span class="logo"><router-link to="/"><img src="@/assets/movie.png" height="24px" width="24px" alt="logo"></router-link></span> <span>Super Movie DataBase</span></div>
+    <div class="login-container">
+      <div class="login-state">
+        <div class="login-caps">
+          <router-link to="/login" tag="button" class="sign-button">Sign In</router-link>
+        </div>
+        <!---->
+      </div>
+    </div>
+  </nav>
+</header>
+`;

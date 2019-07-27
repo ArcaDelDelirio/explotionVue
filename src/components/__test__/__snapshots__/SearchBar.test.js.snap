@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar View Render the component 1`] = `
+<article class="container">
+  <div class="main-title">
+    <h1>Search on Database</h1>
+  </div>
+  <div class="search-container">
+    <form class="search-form"><input type="text" placeholder="ex:Title" name="search" class="search-input"> <button class="search-button"><i>
+          <font-awesome-icon icon="search"></font-awesome-icon>
+        </i></button></form>
+  </div>
+  <div id="result">
+    <datagallery-stub searchquery=""></datagallery-stub>
+  </div>
+</article>
+`;

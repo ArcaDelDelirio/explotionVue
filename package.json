@@ -6,6 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "test:components": "jest ./components/__test__/*",
+    "test:views":"jest ./views/__test__/*",
     "test:unit": "jest",
     "test:unit:watch": "jest --watch"
   },

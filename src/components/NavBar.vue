@@ -6,7 +6,7 @@ export default {
     computed:{
         userState : () => store.state.userLogged  
     }
-//TODO: userLogged variable must be an state??
+
 }
 </script>
 
