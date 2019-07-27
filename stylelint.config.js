@@ -1,6 +1,9 @@
 module.exports = {
-  extends: ["stylelint-config-recommended"],
+  extends: ['stylelint-config-recommended'],
+  plugins: {
+    autoprefixer: {},
+  },
   rules: {
-    "no-empty-source": null
-  }
+    'no-empty-source': null,
+  },
 };

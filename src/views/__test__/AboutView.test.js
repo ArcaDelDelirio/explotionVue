@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
-import { shallowMount } from '@vue/test-utils'
-import About from '../../views/About'
+import { shallowMount } from '@vue/test-utils';
+import About from '../About';
 
 describe('About View', () => {
-    it('Render the component', () => {
-    const wrapper = shallowMount(About)
-    expect(wrapper.html()).toMatchSnapshot()
-    })
-  })
+  it('Render the component', () => {
+    const wrapper = shallowMount(About);
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+});

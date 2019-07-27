@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
-import { shallowMount } from '@vue/test-utils'
-import Login from '../../views/Login'
+import { shallowMount } from '@vue/test-utils';
+import Login from '../../views/Login';
 
 describe('Login View', () => {
-    it('Render the component', () => {
-    const wrapper = shallowMount(Login)
-    expect(wrapper.html()).toMatchSnapshot()
-    })
-  })
+  it('Render the component', () => {
+    const wrapper = shallowMount(Login);
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+});
