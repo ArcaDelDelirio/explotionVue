@@ -1,3 +1,8 @@
+<script>
+    export default {
+        name: "Register"
+    }
+</script>
 <template>
     <form action="">
         <div class="container">
@@ -18,11 +23,6 @@
     </form>
 </template>
 
-<script>
-    export default {
-        name: "Register"
-    }
-</script>
 
 <style scoped>
 

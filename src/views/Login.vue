@@ -1,19 +1,19 @@
 <template>
-  <div class="about">
-    <NavData />
+  <div class="login">
+    <NavBar />
     <input-data />
   </div>
 </template>
 <script>
 // @ is an alias to /src
-import NavData from '@/components/NavData.vue'
-import InputData from "../components/inputData";
+import NavBar from '@/components/NavBar.vue'
+import Login from "@/components/Login.vue";
 
 export default {
-  name: 'about',
+  name: 'login',
   components: {
-    InputData,
-    NavData,
+    Login,
+    NavBar,
   }
 }
 </script>

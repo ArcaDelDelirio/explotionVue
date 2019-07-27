@@ -4,6 +4,17 @@
   </div>
 </template>
 
+<script>
+import store from './store.js'
+
+export default {
+  mounted(){
+    store.dispatch('getServerStatus')
+  }
+}
+</script>
+
+
 <style>
   html,body{
     margin: 0;
