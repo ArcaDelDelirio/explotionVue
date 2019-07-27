@@ -1,9 +1,8 @@
 /* eslint-disable no-undef */
 import { shallowMount } from '@vue/test-utils';
-import Vuex from 'vuex';
-import initialState from '../../../store/state';
+import initialState from '../../store.js';
 
-import Home from '../../views/Home';
+import Home from '../Home';
 import NavData from '../../components/NavData';
 import SearchData from '../../components/SearchData';
 import FooterData from '../../components/FooterData';
@@ -13,7 +12,6 @@ describe('Home View', () => {
   const build = () => {
     const wrapper = shallowMount(Home, {
       data: () => ({
-        // eslint-disable-next-line no-unused-labels
         movie: {},
       }),
     });

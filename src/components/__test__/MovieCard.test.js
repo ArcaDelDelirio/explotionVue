@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils';
-import About from '../../views/About';
+import MovieCard from '../MovieCard';
 
-describe('About View', () => {
+describe('MovieCard View', () => {
   it('Render the component', () => {
-    const wrapper = shallowMount(About);
+    const wrapper = shallowMount(MovieCard);
     expect(wrapper.html()).toMatchSnapshot();
   });
 });

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About View Render the component 1`] = `
+<footer>
+  <div class="flag-api">
+    <div class="status"><i>
+        <font-awesome-icon icon="circle"></font-awesome-icon>
+      </i></div>
+    0ms
+    <i>
+      <font-awesome-icon icon="server"></font-awesome-icon> API State
+    </i>
+  </div>
+</footer>
+`;
+
+exports[`Footer View Render the component 1`] = `
+<footer>
+  <div class="flag-api">
+    <div class="status"><i>
+        <font-awesome-icon icon="circle"></font-awesome-icon>
+      </i></div>
+    0ms
+    <i>
+      <font-awesome-icon icon="server"></font-awesome-icon> API State
+    </i>
+  </div>
+</footer>
+`;

@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils';
-import About from '../../views/About';
+import SearchBar from '../SearchBar';
 
-describe('About View', () => {
+describe('SearchBar View', () => {
   it('Render the component', () => {
-    const wrapper = shallowMount(About);
+    const wrapper = shallowMount(SearchBar);
     expect(wrapper.html()).toMatchSnapshot();
   });
 });

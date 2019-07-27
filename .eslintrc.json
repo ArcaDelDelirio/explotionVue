@@ -1,14 +1,17 @@
 {
     "root": true,
     "env": {
-        "browser": true,
-        "es6": true
+        "node": true,
+        "es6": true,
+        "jest": true
     },
     "extends": [
         "airbnb-base",
         "plugin:vue/essential",
         "eslint:recommended",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -18,6 +21,16 @@
         "ecmaVersion": 2018,
         "sourceType": "module",
         "parser": "babel-eslint"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                ".js",
+                ".vue"
+                ]
+            }
+        }
     },
     "plugins": [
         "vue"

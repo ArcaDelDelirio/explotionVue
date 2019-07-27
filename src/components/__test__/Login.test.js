@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils';
-import About from '../../views/About';
+import Login from '../Login';
 
-describe('About View', () => {
+describe('Login View', () => {
   it('Render the component', () => {
-    const wrapper = shallowMount(About);
+    const wrapper = shallowMount(Login);
     expect(wrapper.html()).toMatchSnapshot();
   });
 });

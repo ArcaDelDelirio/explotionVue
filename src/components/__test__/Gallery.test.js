@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils';
-import About from '../../views/About';
+import Gallery from '../Gallery';
 
-describe('About View', () => {
+describe('Gallery View', () => {
   it('Render the component', () => {
-    const wrapper = shallowMount(About);
+    const wrapper = shallowMount(Gallery);
     expect(wrapper.html()).toMatchSnapshot();
   });
 });

@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils';
-import About from '../../views/About';
+import Register from '../Register';
 
-describe('About View', () => {
+describe('Register View', () => {
   it('Render the component', () => {
-    const wrapper = shallowMount(About);
+    const wrapper = shallowMount(Register);
     expect(wrapper.html()).toMatchSnapshot();
   });
 });

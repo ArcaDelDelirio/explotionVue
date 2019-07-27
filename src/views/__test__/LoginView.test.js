@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { shallowMount } from '@vue/test-utils';
-import Login from '../../views/Login';
+import Login from '../Login';
 
 describe('Login View', () => {
   it('Render the component', () => {
