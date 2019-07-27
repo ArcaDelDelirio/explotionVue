@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import store from './store'
+import store from './store.js'
 
 export default {
   mounted(){
-    store.dispatch('takeState')
+    store.dispatch('getServerStatus')
   }
 }
 </script>

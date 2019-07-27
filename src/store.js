@@ -12,7 +12,7 @@ export default new Vuex.Store({
     responseTime: 0,
   },
   mutations: {
-    takeState(state, time) {
+    getServerStatus(state, time) {
       state.responseTime = time;
       state.apiState = (time > 0);
     },
@@ -21,7 +21,7 @@ export default new Vuex.Store({
     getServerStatus(context) {
       ping('https://api-explotion.herokuapp.com/')
         .then((time) => {
-          context.commit('takeState', time);
+          context.commit('getServerStatus', time);
         })
         .catch(() => console.log('Failed to ping server'));
     },
