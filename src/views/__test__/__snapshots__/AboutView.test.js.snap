@@ -2,7 +2,17 @@
 
 exports[`About View Render the component 1`] = `
 <div class="about">
-  <navdata></navdata>
+  <header>
+    <nav class="navbar">
+      <div class="logo-container"><span class="logo"><a href="#/" class="router-link-exact-active router-link-active"><img src="@/assets/movie.png" height="24px" width="24px" alt="logo"></a></span> <span>Super Movie DataBase</span></div>
+      <div class="login-container">
+        <div class="login-state">
+          <div class="login-caps"><button class="sign-button">Sign In</button></div>
+          <!---->
+        </div>
+      </div>
+    </nav>
+  </header>
   <h1>List of Movies</h1> <button>All movies</button>
   <!---->
 </div>

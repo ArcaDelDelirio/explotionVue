@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <NavBar />
-    <input-data />
+    <Login />
   </div>
 </template>
 <script>

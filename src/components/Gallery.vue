@@ -1,5 +1,5 @@
 <script>
-import { MovieCard } from "./MovieCard";
+import  MovieCard from "./MovieCard";
 export default {
     name:'Gallery',
     data(){
@@ -12,6 +12,9 @@ export default {
             type: String,
             required: false,
         },
+    },
+    components:{
+        MovieCard: MovieCard
     },
     mounted(){
         this.getAllMovies();
@@ -42,7 +45,7 @@ export default {
 <template>
     <div>
         {{searchQuery}}
-        <MovieCard />
+        <MovieCard title="movies[0].title"/>
         {{movies}}
     </div>
 </template>

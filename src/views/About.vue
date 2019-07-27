@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <NavData />
+    <NavBar />
     <h1>List of Movies</h1>
     <button @click="getAllMovies">All movies</button>
     <div v-if="dataApi.hasOwnProperty('0')">

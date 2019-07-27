@@ -3,6 +3,6 @@
 exports[`Login View Render the component 1`] = `
 <div class="login">
   <navbar-stub></navbar-stub>
-  <input-data></input-data>
+  <login-stub></login-stub>
 </div>
 `;
