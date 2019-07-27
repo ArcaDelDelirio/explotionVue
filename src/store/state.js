@@ -1,3 +1,7 @@
 export default {
-    movie:{}
-}
+  state: {
+    userLogged: false,
+    apiState: false,
+    responseTime: 0,
+  },
+};
