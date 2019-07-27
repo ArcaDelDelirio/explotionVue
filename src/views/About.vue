@@ -3,34 +3,30 @@
     <NavBar />
     <h1>List of Movies</h1>
     <button @click="getAllMovies">All movies</button>
-    <div v-if="dataApi.hasOwnProperty('0')">
-      {{dataApi}}
-    </div>
+    <div v-if="dataApi.hasOwnProperty('0')">{{dataApi}}</div>
   </div>
 </template>
 <script>
 // @ is an alias to /src
-import NavBar from '@/components/NavBar.vue'
+import NavBar from '@/components/NavBar.vue';
 
 export default {
   name: 'about',
   components: {
     NavBar,
   },
-  data(){
+  data() {
     return {
-      dataApi:{
-
-      }
-    }
+      dataApi: {},
+    };
   },
   methods: {
-    getAllMovies(){
+    getAllMovies() {
       return fetch(' https://damp-falls-68291.herokuapp.com/movies/get-movies')
-              .then(res => res.json())
-              .then(response => this.dataApi = response)
-              .catch(error => this.dataApi = error)
-    }
-  }
-}
+        .then(res => res.json())
+        .then(response => (this.dataApi = response))
+        .catch(error => (this.dataApi = error));
+    },
+  },
+};
 </script>
