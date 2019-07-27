@@ -4,7 +4,6 @@ node_js:
 branches:
   only:
     - master
-    - gh-pages
 
 jobs:
   include:
@@ -21,6 +20,5 @@ jobs:
         provider: pages
         skip_cleanup: true
         github_token: $GITHUB_TOKEN  
-        keep_history: true
         on:
-          branch: gh-pages
+          branch: master
